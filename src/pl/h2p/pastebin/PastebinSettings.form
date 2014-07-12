@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="pl.h2p.pastebin.PastebinSettings">
+  <grid id="82ad6" binding="panel1" layout-manager="GridLayoutManager" row-count="6" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="661" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="81b96" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="322" height="20"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Redmine's project URL"/>
+        </properties>
+      </component>
+      <component id="2e131" class="javax.swing.JTextField" binding="urlTextField" default-binding="true">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="322" height="23"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="c42ee" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="322" height="15"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="REST API key"/>
+        </properties>
+      </component>
+      <component id="a8e9d" class="javax.swing.JTextField" binding="apiKeyTextField" default-binding="true">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="322" height="23"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="7bfd7" class="javax.swing.JButton" binding="testButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="322" height="31"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Test"/>
+        </properties>
+      </component>
+      <component id="fb4c3" class="javax.swing.JTextPane" default-binding="true">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="322" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <enabled value="false"/>
+          <font swing-font="Label.font"/>
+          <text value="Note:&#10;&#10;In order to use plugin, you need to obtain Redmine project URL and REST API key. You can find it in your Profile section, on the right side. If this field is unavailable, ask your administrator to enable REST API (Administration-&gt;Settings-&gt;Authentication-&gt;Enable REST API) and try again.&#10;&#10;Once you click &quot;Test&quot;, the plugin will check whether your Redmine installation (and Project) have both Pastebin enabled. If response is &quot;Plugin NOT found&quot;, check whether plugin is enabled. Also make sure your permission group has &quot;Pastebin access&quot; enabled."/>
+        </properties>
+      </component>
+      <component id="38056" class="javax.swing.JLabel" binding="entrypointError">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="4" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <text value="Cannot reach entrypoint"/>
+        </properties>
+      </component>
+      <component id="70265" class="javax.swing.JLabel" binding="apikeyError">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="There's a problem with chosen API key or plugin is disabled"/>
+        </properties>
+      </component>
+      <hspacer id="43083">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="20"/>
+          </grid>
+        </constraints>
+      </hspacer>
+      <component id="73c74" class="javax.swing.JLabel" binding="status">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Plugin FOUND"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

@@ -1,0 +1,47 @@
+<idea-plugin version="2">
+  <id>pl.h2p.pastebin</id>
+  <name>Redmine Pastebin client</name>
+  <version>1.0</version>
+  <vendor email="kontakt on h2p dot pl" url="http://h2p.pl">eRIZ from h2p.pl</vendor>
+
+  <description><![CDATA[
+      Pretty simple client for <a href="https://github.com/er1z/redmine_pastebin">Redmine Pastebin</a> module allowing to post pasties directly from IntelliJ.
+
+      This software is provided "as-is", with no warranty at all. But feel free to post any issues or pull requests on GitHub.
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Initial release. Configuration and submitting works.
+    ]]>
+  </change-notes>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="117"/>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products-->
+  <depends>com.intellij.modules.lang</depends>
+
+
+  <extensions defaultExtensionNs="com.intellij">
+      <projectConfigurable instance="pl.h2p.pastebin.PastebinSettings"></projectConfigurable>
+      <projectService serviceInterface="pl.h2p.pastebin.ConfigurationState" serviceImplementation="pl.h2p.pastebin.ConfigurationState"/>
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+      <action id="send-pastebin" class="pl.h2p.pastebin.PastebinAction" text="Create new Paste on Redmine">
+          <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="Github.Create.Gist"/>
+      </action>
+  </actions>
+
+</idea-plugin>
